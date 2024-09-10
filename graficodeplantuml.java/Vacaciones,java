@@ -1,0 +1,48 @@
+import java.util.*;
+
+
+public class Vacaciones {
+   private Date fechalnicio;
+   private Date fechaFin;
+
+
+   public Vacaciones(){
+
+      
+    }
+
+
+   public Vacaciones(Date fechalnicio, Date fechaFin) {
+      this.fechalnicio = fechalnicio;
+      this.fechaFin = fechaFin;
+
+
+   }
+
+   public Date getfechalnicio(){
+
+      return fechalnicio;
+   }
+
+   public Date getfechaFin(){
+
+      return fechaFin;
+   }
+
+   public void serfechalnicio( Date fechalnicio){ 
+      this.fechalnicio = fechalnicio;
+
+    }
+
+   public  void setfechaFin( Date  fechaFin ){
+      this.fechaFin = fechaFin;
+
+   }
+
+
+
+
+
+
+    
+}

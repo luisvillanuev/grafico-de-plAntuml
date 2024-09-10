@@ -1,0 +1,77 @@
+@startuml
+
+
+
+Class Medico{
+
+     String nombre;
+     String direccion;
+     String telefono;
+     String poblacion;
+     String provicion;
+     String codigoPostal;
+     String nif;
+     String numSegSocial;
+
+
+}
+
+
+
+
+
+Class Empleado{
+
+    String nombre;
+    String direccion;
+    String telefono;
+    String  poblacion;
+    String provicion;
+    String codigoPostal;
+    String  nif;
+    String numSegSocial;
+}
+
+Class Paciente{
+    String nombre;
+    String direccion;
+    String telefono;
+    String codigoPostal;
+    String nif;
+    String numSegSocial;
+    String medicoAsignado;
+}
+
+Class Horario {
+    String dia;
+    String horalnicio;
+}
+
+Class Sustitucion {
+    Date fechaAlta;
+    Date fechaBaja;
+}
+
+
+
+Class Vacaciones {
+    Date fechalnicio;
+    Date fechaFin;
+}
+
+medico "*" -- "1"  Empleado: trabajar
+medico  "*" --  "1" Paciente : consulta
+Empleado "*" -- "1" Horario: tiempo de  trabajar
+Sustitucion "*" -- "1" medico : tiempo terminado
+Vacaciones "*"  -- "1" Empleado : descanso de trabajar
+Horario "*" --  "1" medico : tiempo culminado
+Empleado "*" -- "1" Sustitucion : se a cabo
+Horario "*" --  "1" Paciente : hora  de llegado
+
+
+
+
+
+@enduml
+
+
